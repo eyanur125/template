@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - FitZone Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#1a1a1a',
+                        accent: '#f7931e'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">FitZone</h1>
+                </div>
+                <div class="">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="text-primary font-semibold">Home</a>
+                        <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+                        <a href="trainers.html" class="hover:text-primary transition-colors">Trainers</a>
+                        <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
+                        <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                        <a href="membership.html" class="bg-primary hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Join Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-semibold">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:text-primary">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:text-primary">Services</a>
+                <a href="trainers.html" class="block px-3 py-2 text-white hover:text-primary">Trainers</a>
+                <a href="gallery.html" class="block px-3 py-2 text-white hover:text-primary">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:text-primary">Contact</a>
+                <a href="membership.html" class="block px-3 py-2 bg-primary text-white rounded-lg mx-3">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="text-primary">Services</span></h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive fitness solutions designed to help you achieve your goals, no matter your fitness level.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Weight Training -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/5327523/pexels-photo-5327523.jpeg" alt="Weight Training" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold mb-4 text-primary">Weight Training</h3>
+                        <p class="text-gray-300 mb-6">Build strength, muscle mass, and bone density with our comprehensive weight training programs. Our state-of-the-art equipment and expert guidance ensure safe and effective workouts.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Free weights and barbells
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Modern resistance machines
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Powerlifting platform
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Expert form coaching
+                            </li>
+                        </ul>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cardio Training -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg" alt="Cardio Training" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold mb-4 text-primary">Cardio Training</h3>
+                        <p class="text-gray-300 mb-6">Improve your cardiovascular health, burn calories, and boost endurance with our extensive cardio equipment and high-energy classes.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Treadmills with entertainment systems
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Elliptical machines
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Stationary bikes
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                HIIT training zones
+                            </li>
+                        </ul>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Group Classes -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Group Classes" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold mb-4 text-primary">Group Classes</h3>
+                        <p class="text-gray-300 mb-6">Join our energetic group fitness classes for motivation, fun, and community. From yoga to high-intensity workouts, we have something for everyone.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Yoga & Pilates
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Zumba & Dance Fitness
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                CrossFit & Bootcamp
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Spinning & Cycling
+                            </li>
+                        </ul>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            View Schedule
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Personal Training -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Personal Training" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold mb-4 text-primary">Personal Training</h3>
+                        <p class="text-gray-300 mb-6">Get personalized attention and customized workout plans with our certified personal trainers. Achieve your goals faster with one-on-one guidance.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Customized workout plans
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Nutrition guidance
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Progress tracking
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Flexible scheduling
+                            </li>
+                        </ul>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            Book Session
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Schedule -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Class <span class="text-primary">Schedule</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Join our popular group fitness classes. All levels welcome!
+                </p>
+            </div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Time</th>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Monday</th>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Tuesday</th>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Wednesday</th>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Thursday</th>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Friday</th>
+                                <th class="px-6 py-4 text-left text-white font-semibold">Saturday</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-semibold">6:00 AM</td>
+                                <td class="px-6 py-4">Morning Yoga</td>
+                                <td class="px-6 py-4">HIIT Training</td>
+                                <td class="px-6 py-4">Morning Yoga</td>
+                                <td class="px-6 py-4">CrossFit</td>
+                                <td class="px-6 py-4">Morning Yoga</td>
+                                <td class="px-6 py-4">Bootcamp</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-semibold">9:00 AM</td>
+                                <td class="px-6 py-4">Pilates</td>
+                                <td class="px-6 py-4">Zumba</td>
+                                <td class="px-6 py-4">Pilates</td>
+                                <td class="px-6 py-4">Zumba</td>
+                                <td class="px-6 py-4">Pilates</td>
+                                <td class="px-6 py-4">Dance Fitness</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-semibold">12:00 PM</td>
+                                <td class="px-6 py-4">Lunch Cardio</td>
+                                <td class="px-6 py-4">Strength Training</td>
+                                <td class="px-6 py-4">Lunch Cardio</td>
+                                <td class="px-6 py-4">Strength Training</td>
+                                <td class="px-6 py-4">Lunch Cardio</td>
+                                <td class="px-6 py-4">Open Gym</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-semibold">6:00 PM</td>
+                                <td class="px-6 py-4">CrossFit</td>
+                                <td class="px-6 py-4">Evening Yoga</td>
+                                <td class="px-6 py-4">CrossFit</td>
+                                <td class="px-6 py-4">Evening Yoga</td>
+                                <td class="px-6 py-4">HIIT Training</td>
+                                <td class="px-6 py-4">Weekend Warrior</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">7:30 PM</td>
+                                <td class="px-6 py-4">Spinning</td>
+                                <td class="px-6 py-4">Bootcamp</td>
+                                <td class="px-6 py-4">Spinning</td>
+                                <td class="px-6 py-4">Bootcamp</td>
+                                <td class="px-6 py-4">Spinning</td>
+                                <td class="px-6 py-4">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Additional <span class="text-primary">Services</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Extra amenities and services to enhance your fitness journey.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-gray-900 rounded-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Nutrition Coaching</h3>
+                    <p class="text-gray-300">Get personalized meal plans and nutrition guidance from our certified nutritionists.</p>
+                </div>
+                <div class="text-center p-8 bg-gray-900 rounded-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Massage Therapy</h3>
+                    <p class="text-gray-300">Relax and recover with our professional massage therapy services available on-site.</p>
+                </div>
+                <div class="text-center p-8 bg-gray-900 rounded-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Body Composition Analysis</h3>
+                    <p class="text-gray-300">Track your progress with advanced body composition analysis and fitness assessments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">FitZone</h3>
+                    <p class="text-gray-400 mb-6">Transform your body, transform your life.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="membership.html" class="hover:text-primary transition-colors">Membership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Weight Training</li>
+                        <li>Cardio Training</li>
+                        <li>Group Classes</li>
+                        <li>Personal Training</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>123 Fitness Street</li>
+                        <li>(555) 123-4567</li>
+                        <li>info@fitzonegym.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 FitZone Gym. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

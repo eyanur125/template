@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans - FitZone Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#1a1a1a',
+                        accent: '#f7931e'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+      <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">FitZone</h1>
+                </div>
+                <div class="">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="text-primary font-semibold">Home</a>
+                        <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+                        <a href="trainers.html" class="hover:text-primary transition-colors">Trainers</a>
+                        <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
+                        <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                        <a href="membership.html" class="bg-primary hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Join Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-semibold">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:text-primary">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:text-primary">Services</a>
+                <a href="trainers.html" class="block px-3 py-2 text-white hover:text-primary">Trainers</a>
+                <a href="gallery.html" class="block px-3 py-2 text-white hover:text-primary">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:text-primary">Contact</a>
+                <a href="membership.html" class="block px-3 py-2 bg-primary text-white rounded-lg mx-3">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Membership <span class="text-primary">Plans</span></h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Choose the perfect plan that fits your lifestyle and fitness goals. All memberships include access to our world-class facilities.
+            </p>
+            <div class="bg-primary text-white px-6 py-3 rounded-lg inline-block">
+                <span class="font-bold">🎉 Special Offer: Save 20% on Annual Plans!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-gray-900 rounded-lg p-8 relative">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Basic</h3>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-primary mb-2">$29</div>
+                        <div class="text-gray-400">per month</div>
+                        <div class="text-sm text-gray-500 line-through">$35/month</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Gym access during staffed hours</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Access to cardio and weight equipment</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Locker room and shower facilities</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Free fitness assessment</span>
+                        </li>
+                        <li class="flex items-center text-gray-500">
+                            <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            <span>Group classes</span>
+                        </li>
+                        <li class="flex items-center text-gray-500">
+                            <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            <span>24/7 access</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        Choose Basic
+                    </button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="bg-primary rounded-lg p-8 relative transform scale-105 border-4 border-orange-400">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-400 text-white px-4 py-1 rounded-full text-sm font-bold">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center text-white">Premium</h3>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-white mb-2">$59</div>
+                        <div class="text-orange-200">per month</div>
+                        <div class="text-sm text-orange-300 line-through">$75/month</div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-white">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Everything in Basic</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>24/7 gym access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Unlimited group classes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Nutrition consultation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>2 guest passes per month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Free parking</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                        Choose Premium
+                    </button>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="bg-gray-900 rounded-lg p-8 relative">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Elite</h3>
+                    <div class="text-center mb-8">
+                        <div class="text-5xl font-bold text-primary mb-2">$99</div>
+                        <div class="text-gray-400">per month</div>
+                        <div class="text-sm text-gray-500 line-through">$125/month</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Everything in Premium</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>4 personal training sessions/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Custom meal planning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Monthly massage therapy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>VIP lounge access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Priority class booking</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        Choose Elite
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Membership <span class="text-primary">Benefits</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Every FitZone membership comes with these amazing benefits and features.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Secure Lockers</h3>
+                    <p class="text-gray-300">Complimentary day-use lockers with premium rental options available.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Member App</h3>
+                    <p class="text-gray-300">Track workouts, book classes, and connect with other members through our app.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Community Events</h3>
+                    <p class="text-gray-300">Regular fitness challenges, workshops, and social events for members.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Expert Support</h3>
+                    <p class="text-gray-300">Access to certified trainers and fitness experts for guidance and motivation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked <span class="text-primary">Questions</span></h2>
+                <p class="text-xl text-gray-300">
+                    Get answers to common questions about our membership plans and policies.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Can I freeze my membership?</h3>
+                    <p class="text-gray-300">Yes, you can freeze your membership for up to 3 months per year for medical reasons or extended travel. A small administrative fee applies.</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Is there a contract commitment?</h3>
+                    <p class="text-gray-300">We offer both month-to-month and annual membership options. Annual memberships come with significant savings and additional benefits.</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Can I bring guests?</h3>
+                    <p class="text-gray-300">Premium and Elite members receive complimentary guest passes each month. Basic members can purchase day passes for guests at a discounted rate.</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">What if I want to cancel?</h3>
+                    <p class="text-gray-300">Month-to-month memberships can be cancelled with 30 days notice. Annual memberships have a 3-day cooling-off period after signup.</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Do you offer student discounts?</h3>
+                    <p class="text-gray-300">Yes! We offer a 15% discount for full-time students with valid student ID. Military personnel and seniors (65+) also receive special pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">FitZone</h3>
+                    <p class="text-gray-400 mb-6">Transform your body, transform your life.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li>
+                            <a href="membership.html" class="hover:text-primary transition-colors">Membership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Membership</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Basic Plan - $29/month</li>
+                        <li>Premium Plan - $59/month</li>
+                        <li>Elite Plan - $99/month</li>
+                        <li>Corporate Packages Available</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>123 Fitness Street</li>
+                        <li>(555) 123-4567</li>
+                        <li>info@fitzonegym.com</li>
+                        <li>Open 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 FitZone Gym. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

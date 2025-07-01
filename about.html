@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FitZone Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#1a1a1a',
+                        accent: '#f7931e'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+      <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">FitZone</h1>
+                </div>
+                <div class="">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="text-primary font-semibold">Home</a>
+                        <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+                        <a href="trainers.html" class="hover:text-primary transition-colors">Trainers</a>
+                        <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
+                        <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                        <a href="membership.html" class="bg-primary hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Join Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-semibold">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:text-primary">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:text-primary">Services</a>
+                <a href="trainers.html" class="block px-3 py-2 text-white hover:text-primary">Trainers</a>
+                <a href="gallery.html" class="block px-3 py-2 text-white hover:text-primary">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:text-primary">Contact</a>
+                <a href="membership.html" class="block px-3 py-2 bg-primary text-white rounded-lg mx-3">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">About <span class="text-primary">FitZone</span></h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                More than just a gym - we're a community dedicated to transforming lives through fitness, wellness, and unwavering support.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Our <span class="text-primary">Story</span></h2>
+                    <p class="text-gray-300 mb-6 text-lg">
+                        Founded in 2014, FitZone began with a simple mission: to create a welcoming space where people of all fitness levels could pursue their health and wellness goals. What started as a small neighborhood gym has grown into a thriving fitness community.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Our founders, Sarah and Mike Thompson, were passionate fitness enthusiasts who saw the need for a gym that combined state-of-the-art equipment with personalized attention and genuine care for each member's journey.
+                    </p>
+                    <p class="text-gray-300">
+                        Today, we're proud to serve over 5,000 members and continue to expand our services while maintaining the personal touch that makes FitZone special.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="FitZone Founders" class="rounded-lg shadow-lg">
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg">
+                        <div class="text-3xl font-bold">10+</div>
+                        <div class="text-sm">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="text-center p-8 bg-gray-800 rounded-lg">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-primary">Our Mission</h3>
+                    <p class="text-gray-300 text-lg">
+                        To empower individuals to achieve their fitness goals through expert guidance, cutting-edge facilities, and a supportive community that celebrates every victory, big or small.
+                    </p>
+                </div>
+                <div class="text-center p-8 bg-gray-800 rounded-lg">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-primary">Our Vision</h3>
+                    <p class="text-gray-300 text-lg">
+                        To be the leading fitness destination that transforms lives, builds confidence, and creates a healthier, stronger community one member at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-primary">Values</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    These core values guide everything we do and shape the FitZone experience.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Community</h3>
+                    <p class="text-gray-300">Building lasting relationships and supporting each other's fitness journeys.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Excellence</h3>
+                    <p class="text-gray-300">Striving for the highest standards in everything we do and offer.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Integrity</h3>
+                    <p class="text-gray-300">Being honest, transparent, and authentic in all our interactions.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Innovation</h3>
+                    <p class="text-gray-300">Continuously improving and adopting new methods to serve you better.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Leadership -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Leadership <span class="text-primary">Team</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Meet the passionate leaders who drive FitZone's mission forward.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center bg-gray-800 p-8 rounded-lg">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Thompson" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-2xl font-bold mb-2">Sarah Thompson</h3>
+                    <p class="text-primary mb-4">Co-Founder & CEO</p>
+                    <p class="text-gray-300 mb-4">Former Olympic athlete with 15+ years in fitness industry. Passionate about helping others achieve their potential.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center bg-gray-800 p-8 rounded-lg">
+                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Mike Thompson" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-2xl font-bold mb-2">Mike Thompson</h3>
+                    <p class="text-primary mb-4">Co-Founder & COO</p>
+                    <p class="text-gray-300 mb-4">Certified strength coach and business strategist. Focuses on operational excellence and member experience.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center bg-gray-800 p-8 rounded-lg">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Dr. Lisa Chen" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-2xl font-bold mb-2">Dr. Lisa Chen</h3>
+                    <p class="text-primary mb-4">Head of Wellness</p>
+                    <p class="text-gray-300 mb-4">Sports medicine physician and nutrition specialist. Leads our wellness programs and injury prevention initiatives.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our <span class="text-primary">Achievements</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Recognition and milestones that reflect our commitment to excellence.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">5000+</div>
+                    <div class="text-gray-300">Happy Members</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+                    <div class="text-gray-300">Expert Trainers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">15+</div>
+                    <div class="text-gray-300">Awards Won</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2">98%</div>
+                    <div class="text-gray-300">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">FitZone</h3>
+                    <p class="text-gray-400 mb-6">Transform your body, transform your life. Join the FitZone family today.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="trainers.html" class="hover:text-primary transition-colors">Trainers</a></li>
+                        <li><a href="membership.html" class="hover:text-primary transition-colors">Membership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Weight Training</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Cardio Training</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Group Classes</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Personal Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>123 Fitness Street</li>
+                        <li>Gym City, GC 12345</li>
+                        <li>(555) 123-4567</li>
+                        <li>info@fitzonegym.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 FitZone Gym. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

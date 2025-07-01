@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - FitZone Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#1a1a1a',
+                        accent: '#f7931e'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+      <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-primary">FitZone</h1>
+                </div>
+                <div class="">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="text-primary font-semibold">Home</a>
+                        <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                        <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+                        <a href="trainers.html" class="hover:text-primary transition-colors">Trainers</a>
+                        <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
+                        <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                        <a href="membership.html" class="bg-primary hover:bg-orange-600 px-4 py-2 rounded-lg transition-colors">Join Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-semibold">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:text-primary">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:text-primary">Services</a>
+                <a href="trainers.html" class="block px-3 py-2 text-white hover:text-primary">Trainers</a>
+                <a href="gallery.html" class="block px-3 py-2 text-white hover:text-primary">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:text-primary">Contact</a>
+                <a href="membership.html" class="block px-3 py-2 bg-primary text-white rounded-lg mx-3">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Our <span class="text-primary">Gallery</span></h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Take a virtual tour of our state-of-the-art facilities, see our community in action, and get inspired by transformation stories.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="py-8 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="filterGallery('all')" class="gallery-filter active bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition-colors">
+                    All Photos
+                </button>
+                <button onclick="filterGallery('facilities')" class="gallery-filter bg-gray-700 hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
+                    Facilities
+                </button>
+                <button onclick="filterGallery('equipment')" class="gallery-filter bg-gray-700 hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
+                    Equipment
+                </button>
+                <button onclick="filterGallery('classes')" class="gallery-filter bg-gray-700 hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
+                    Classes
+                </button>
+                <button onclick="filterGallery('events')" class="gallery-filter bg-gray-700 hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
+                    Events
+                </button>
+                <button onclick="filterGallery('transformations')" class="gallery-filter bg-gray-700 hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
+                    Transformations
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery-grid">
+                
+                <!-- Facilities Images -->
+                <div class="gallery-item group cursor-pointer" data-category="facilities" onclick="openModal('https://images.pexels.com/photos/7031706/pexels-photo-7031706.jpeg', 'Main Gym Floor')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/7031706/pexels-photo-7031706.jpeg" alt="Main Gym Floor" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Main Gym Floor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="facilities" onclick="openModal('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80', 'Cardio Zone')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=80" alt="Cardio Zone" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Cardio Zone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="facilities" onclick="openModal('https://images.pexels.com/photos/3902735/pexels-photo-3902735.jpeg', 'Locker Rooms')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/3902735/pexels-photo-3902735.jpeg" alt="Locker Rooms" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Premium Locker Rooms</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment Images -->
+                <div class="gallery-item group cursor-pointer" data-category="equipment" onclick="openModal('https://images.pexels.com/photos/6455814/pexels-photo-6455814.jpeg', 'Weight Training Area')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/6455814/pexels-photo-6455814.jpeg" alt="Weight Training Area" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Weight Training Area</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="equipment" onclick="openModal('https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=1200&q=80', 'Modern Treadmills')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=400&q=80" alt="Modern Treadmills" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Modern Treadmills</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="equipment" onclick="openModal('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80', 'Free Weights Section')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Free Weights Section" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Free Weights Section</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Classes Images -->
+                <div class="gallery-item group cursor-pointer" data-category="classes" onclick="openModal('https://images.pexels.com/photos/8436620/pexels-photo-8436620.jpeg', 'Yoga Class in Session')">
+                    <div class="relative overflow-hidden rounded-lg">
+                            <img src="https://images.pexels.com/photos/8436620/pexels-photo-8436620.jpeg" alt="Yoga Class" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Yoga Class in Session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="classes" onclick="openModal('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80', 'HIIT Training Session')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="HIIT Training" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">HIIT Training Session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="classes" onclick="openModal('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80', 'Zumba Dance Fitness')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Zumba Class" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Zumba Dance Fitness</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Images -->
+                <div class="gallery-item group cursor-pointer" data-category="events" onclick="openModal('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80', 'Fitness Challenge Event')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Fitness Challenge" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Fitness Challenge Event</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="events" onclick="openModal('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80', 'Grand Opening Celebration')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Grand Opening" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Grand Opening Celebration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transformation Images -->
+                <div class="gallery-item group cursor-pointer" data-category="transformations" onclick="openModal('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80', 'Member Transformation - Sarah')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Transformation Story" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Sarah's 6-Month Transformation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item group cursor-pointer" data-category="transformations" onclick="openModal('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80', 'Member Transformation - Mike')">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Transformation Story" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="w-12 h-12 text-white mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <p class="text-white font-semibold">View Full Size</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg">
+                            <p class="font-semibold">Mike's Weight Loss Journey</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Take a <span class="text-primary">Virtual Tour</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Experience our gym from the comfort of your home with our interactive virtual tour.
+                </p>
+            </div>
+            <div class="bg-gray-900 rounded-lg p-8 text-center">
+                <div class="bg-gray-700 rounded-lg h-96 flex items-center justify-center mb-6">
+                    <div class="text-center">
+                        <svg class="w-20 h-20 text-primary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold mb-4">360° Virtual Tour</h3>
+                        <p class="text-gray-300 mb-6">Click below to start your interactive virtual tour of FitZone Gym</p>
+                        <button class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                            Start Virtual Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-primary text-2xl">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <img id="modalImage" src="/placeholder.svg" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+            <div class="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 rounded-b-lg">
+                <h3 id="modalTitle" class="text-xl font-bold"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">FitZone</h3>
+                    <p class="text-gray-400 mb-6">Transform your body, transform your life.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="membership.html" class="hover:text-primary transition-colors">Membership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Gallery</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>Facilities Tour</li>
+                        <li>Equipment Showcase</li>
+                        <li>Class Photos</li>
+                        <li>Member Transformations</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>123 Fitness Street</li>
+                        <li>(555) 123-4567</li>
+                        <li>gallery@fitzonegym.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 FitZone Gym. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery filter functionality
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-filter');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-primary');
+                btn.classList.add('bg-gray-700');
+            });
+            
+            event.target.classList.add('active', 'bg-primary');
+            event.target.classList.remove('bg-gray-700');
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal functionality
+        function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal on background click
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
